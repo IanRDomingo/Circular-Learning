@@ -63,7 +63,7 @@ class MNIST:
 def main(args):
     INPUT_SIZE = 784
     BATCHSIZE = args.batchsize
-    LEARNING_RATE_CLASSIFIER = args.learning_rate_classifier
+    LEARNING_RATE_CLASSIFIER = args.learning_rate
     NUM_BATCH_ITERATIONS = args.num_batch_iterations
     TOURBILLON_SIZES = args.hidden_sizes
 
@@ -179,8 +179,8 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train a stack of autoencoders using recirculation asynchronously')
     parser.add_argument('--batchsize', type=int, default=64, help='Input batch size for training (default: 64)')
-    parser.add_argument('--learning_rate_classifier', type=float, default=0.001, help='Learning rate for the classifier (default: 0.001)')
-    parser.add_argument('--num_batch_iterations', type=int, default=10000, help='Number of batch iterations (default: 10000)')
+    parser.add_argument('--learning_rate', type=float, default=0.001, help='Learning rate for the classifier (default: 0.001)')
+    parser.add_argument('--num_batch_iterations', type=int, default=10000, help='Number of batches used to asynchronously train the stack (default: 10000)')
     parser.add_argument('--hidden_sizes', nargs='+', type=int, help='Hidden hinge layer sizes of the stacked autoencoders (default: [256])', default=[256])
     parser.add_argument('--seed', type = int, default = 101, help = 'Seed used for reproducibility (default: 101)')
     parser.add_argument('--device', type = str, default = 'cpu', help = 'Device used to run program (default: cpu)')

@@ -1,5 +1,7 @@
 import sys
 from utils.classes import *
+from utils.BP import *
+from utils.RBP import *
 from utils.CircAE import *
 import random
 import torchvision
@@ -44,7 +46,6 @@ def set_seed(seed):
 
 def main(args):
     device = args.device
-
     model = build_conv_model(6, 3).to(device)
     set_seed(args.seed)
     batchsize = args.batchsize
@@ -54,17 +55,29 @@ def main(args):
     cifar10_test = CIFAR10(batchsize, test=True)
     d_test = cifar10_test.dataset
 
-    cir = CircularAE(model, ncirc=args.ncirc, device = device)
+    if args.training_type == 'BP':
+        cir = BP(model, autoencoding=True, device = device)
+        model, hist = cir.train(dataset=d_train, lr=args.learning_rate,
+                                epochs=100, valid_dataset=d_test)
+    elif args.training_type == 'RBP':
+        cir = RBP(model, autoencoding=True, device = device)
+        model, hist = cir.train(dataset=d_train, lr=args.learning_rate,
+                                epochs=100, valid_dataset=d_test)
+    elif args.training_type == 'Recirculation':
+        cir = CircularAE(model, ncirc=args.ncirc, device = device)
+        model, hist = cir.train(dataset=d_train, lr=args.learning_rate,
+                                epochs=100, valid_dataset=d_test)
+    else:
+        raise ValueError("invalid training type")
 
-    model, hist = cir.train(dataset=d_train, lr=args.learning_rate,
-                            epochs=100, valid_dataset=d_test)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train a stack of autoencoders using recirculation asynchronously')
     parser.add_argument('--batchsize', type=int, default=64, help='Input batch size for training (default: 64)')
-    parser.add_argument('--learning_rate', type=float, default=0.0001, help='Learning rate for the classifier (default: 0.0001)')
+    parser.add_argument('--learning_rate', type=float, default=0.001, help='Learning rate for the classifier (default: 0.001)')
     parser.add_argument('--device', type = str, default = 'cpu', help = 'Device used to run program (default: cpu)')
     parser.add_argument('--seed', type = int, default = 101, help = 'Seed used for reproducibility (default: 101)')
     parser.add_argument('--ncirc', type = int, default = 1, help = 'Number of CAE recirculations (default: 1)')
+    parser.add_argument('training_type', type = str, help = 'Training Type for the model (Recirculation, RBP, BP)')
     args = parser.parse_args()
     sys.exit(main(args))
