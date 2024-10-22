@@ -48,7 +48,7 @@ hidden_sizes: Hidden hinge layer sizes of the stacked autoencoders (default: [25
 
 num_batch_iterations: Number of batches used to asynchronously train the stack (default: 10000)
 
-## Dataa
+## Data
 
 The datasets used in this project are:
 
@@ -57,3 +57,9 @@ The datasets used in this project are:
 [FashionMnist](https://www.kaggle.com/datasets/zalando-research/fashionmnist)
 
 [Cifar-10](https://www.cs.toronto.edu/~kriz/cifar.html)
+
+## Additional Rebuttal Figures
+
+![bpAutoencoderTourbillonComparison](./images/bpAutoencoderTourbillonComparison.pdf)
+!CifarTrainTestPlots](./images/cifar_2.pdf)
+![TourbillonComparison](./images/Figure4.pdf)
