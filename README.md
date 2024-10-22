@@ -1,9 +1,11 @@
 # Tourbillon
- 
+
 ## Dependencies
+
 requirements.txt lists the requirements to run the repo. Run the command pip install -r requirements.txt in order to install all dependencies for this repo.
 
 ## Circular Autoencoders
+
 Contains the main files required to train single layer autoencoders using the recirculation, backpropagation, and feedback alignment methodologies. Separated by the dataset used (Mnist, Fashion Mnist, and CIFAR-10)
 
 ### Each file takes the following arguments:
@@ -60,6 +62,11 @@ The datasets used in this project are:
 
 ## Additional Rebuttal Figures
 
-![bpAutoencoderTourbillonComparison](./images/bpAutoencoderTourbillonComparison.pdf)
-!CifarTrainTestPlots](./images/cifar_2.pdf)
-![TourbillonComparison](./images/Figure4.pdf)
+
+`<img src="./images/cifar_2.png" alt="cifar_tourbillon_comparison" width="500">`
+
+
+`<img src="./images/Figure4.png" alt="tourbillon comparison" width="500">`
+
+
+`<img src="./images/LimitedDataExperiments.png" alt="limited data experiments" width="500">`
