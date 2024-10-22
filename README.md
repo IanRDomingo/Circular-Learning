@@ -62,11 +62,17 @@ The datasets used in this project are:
 
 ## Additional Rebuttal Figures
 
-
-`<img src="./images/cifar_2.png" alt="cifar_tourbillon_comparison" width="500">`
-
-
-`<img src="./images/Figure4.png" alt="tourbillon comparison" width="500">`
+Comparison between CAE, BP, and FA, on the CIFAR-10 dataset, with a better backpropagation setup
 
 
-`<img src="./images/LimitedDataExperiments.png" alt="limited data experiments" width="500">`
+![cifar_tourbillon_comparison](./images/cifar_2.png)
+
+Comparison between Sequential Tourbillon, Asynchronous Tourbillon, Backpropagation, Feedback Alignment, Tourbillon, with a classifier trained only on 10% of the dataset, and a Tourbillon stack, with each autoencoder trained using backpropagation instead of recirculation
+
+
+![tourbillon comparison](./images/Figure4.png)
+
+Comparison between various classifiers trained on the hinge representation of a tourbillon model, trained with only  a fraction of the train dataset.
+
+
+![limited data experiments](./images/LimitedDataExperiments.png)
