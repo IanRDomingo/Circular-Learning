@@ -48,7 +48,7 @@ hidden_sizes: Hidden hinge layer sizes of the stacked autoencoders (default: [25
 
 num_batch_iterations: Number of batches used to asynchronously train the stack (default: 10000)
 
-## Data
+## Dataa
 
 The datasets used in this project are:
 
