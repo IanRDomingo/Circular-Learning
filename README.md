@@ -62,18 +62,17 @@ The datasets used in this project are:
 
 ## Figures
 
-Figure 3. [reconstruction_all_2.pdf](https://github.com/user-attachments/files/17657306/reconstruction_all_2.pdf)
+![Figure 3](./images/reconstruction_all_2.pdf)
 
-Figure 4. [Figure4.pdf](https://github.com/user-attachments/files/17657297/Figure4.pdf)
+![Figure 4](./images/Figure4.pdf)
 
-Figure 6. [LimitedDataExperiments_updated.pdf](https://github.com/user-attachments/files/17657295/LimitedDataExperiments_updated.pdf)
+![Figure 6](./images/LimitedDataExperiments_updated.pdf)
 
-Figure A.3
-[reconstructions.pdf](https://github.com/user-attachments/files/17657283/reconstructions.pdf)
+![A3](./images/reconstructions.pdf)
 
 
 ## Revised Figures
 
 Revised Figure 5. from https://www.overleaf.com/project/66b013e56ed3a6386b8dd17f
-[FigCifar.pdf](https://github.com/user-attachments/files/17657261/FigCifar.pdf)
+![Revised 5](./images/FigCifar.pdf)
 
