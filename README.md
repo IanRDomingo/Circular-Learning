@@ -61,18 +61,18 @@ The datasets used in this project are:
 [Cifar-10](https://www.cs.toronto.edu/~kriz/cifar.html)
 
 ## Figures
-
+### Figure 3
 ![Figure 3](reconstruction_all_2-1.png)
-
+### Figure 4
 ![Figure 4](Figure4-1.png)
-
+### Figure 6
 ![Figure 6](LimitedDataExperiments_updated-1.png)
-
+### Figure A.3
 ![A3](reconstructions-1.png)
 
 
 ## Revised Figures
-
+### Figure 5
 Revised Figure 5. from https://www.overleaf.com/project/66b013e56ed3a6386b8dd17f
 ![Revised 5](FigCifar-1.png)
 
