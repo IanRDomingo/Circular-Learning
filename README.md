@@ -62,17 +62,17 @@ The datasets used in this project are:
 
 ## Figures
 
-![Figure 3](./reconstruction_all_2.png)
+![Figure 3](reconstruction_all_2.png)
 
-![Figure 4](./Figure4.png)
+![Figure 4](Figure4.png)
 
-![Figure 6](./LimitedDataExperiments_updated.png)
+![Figure 6](LimitedDataExperiments_updated.png)
 
-![A3](./reconstructions.png)
+![A3](reconstructions.png)
 
 
 ## Revised Figures
 
 Revised Figure 5. from https://www.overleaf.com/project/66b013e56ed3a6386b8dd17f
-![Revised 5](./FigCifar.png)
+![Revised 5](FigCifar.png)
 
